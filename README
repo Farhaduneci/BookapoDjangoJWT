@@ -1,0 +1,9 @@
+# BOOKAPO CODE CHALLENGE
+
+This is my code challenge for Bookapo.
+
+This application is a simple JWT authentication system with a REST API.
+User's last activity is tracked and stored in the database on each
+(valid) request.
+
+=> https://bookapo.com
