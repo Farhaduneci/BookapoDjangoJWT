@@ -12,6 +12,12 @@ from .models import User
 # and this could be a security vulnerability. If we really want this,
 # wee need to throttle the endpoint with DRF at the very least.
 
+# HINT: I know it's not the best way of implementing this! But I chose
+# DRF simple JWT package and implemented this middleware afterwards.
+# The way that the package handles user authentication is not the best
+# for this use case. I would have implemented this differently if I had
+# more time.
+
 
 class UpdateLastActivityMiddleware(object):
     @staticmethod
