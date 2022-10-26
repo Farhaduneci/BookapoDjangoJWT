@@ -7,6 +7,12 @@ from django.contrib.auth.middleware import get_user
 from .models import User
 
 
+# Warning: Updating last_activity will dramatically increase the number of
+# database transactions. People abusing the views could slow the server
+# and this could be a security vulnerability. If we really want this,
+# wee need to throttle the endpoint with DRF at the very least.
+
+
 class UpdateLastActivityMiddleware(object):
     @staticmethod
     def get_user(request):
